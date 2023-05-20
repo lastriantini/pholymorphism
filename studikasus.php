@@ -22,6 +22,14 @@ class robusta extends kopi implements minuman{
     public function roastTime(){
         return "10 menit";
     }
+    public function __destruct() {
+        echo "<br> <br> Nama : ". $this->nama;
+        echo "<br> Jenis : ". $this->jenis();
+        echo "<br> asal : ". $this->asal;
+        echo "<br> rasa : ".$this->rasa;
+        echo "<br> kepekatan : ".$this->kepekatan;
+        echo "<br> Waktu Pembakaran : ".$this->roastTime();
+    }
 }
 
 class arabica extends kopi implements minuman{
@@ -39,21 +47,15 @@ class arabica extends kopi implements minuman{
     public function roastTime(){
         return "15 menit";
     }
+    public function __destruct() {
+        echo "<br> <br> Nama : ". $this->nama;
+        echo "<br> Jenis : ". $this->jenis();
+        echo "<br> asal : ". $this->asal;
+        echo "<br> rasa : ".$this->rasa;
+        echo "<br> kepekatan : ".$this->kepekatan;
+        echo "<br> Waktu Pembakaran : ".$this->roastTime();
+    }
 }
 
 $kopiLampung = new robusta("Pahit", "Sangat Pekat", "Lampung", "Kopi Lampung");
 $kopiKintamani = new arabica("Asam", "Tidak Pekat", "Bali", "Kopi Kintamani");
-
-echo "Nama : ".$kopiLampung->nama;
-echo "<br> Jenis : ".$kopiLampung->jenis();
-echo "<br> asal : ".$kopiLampung->asal;
-echo "<br> rasa : ".$kopiLampung->rasa;
-echo "<br> kepekatan : ".$kopiLampung->kepekatan;
-echo "<br> Waktu Pembakaran : ".$kopiLampung->roastTime();
-echo "<br><br>";
-echo "Nama : ".$kopiKintamani->nama;
-echo "<br> Jenis : ".$kopiKintamani->jenis();
-echo "<br> asal : ".$kopiKintamani->asal;
-echo "<br> rasa : ".$kopiKintamani->rasa;
-echo "<br> kepekatan : ".$kopiKintamani->kepekatan;
-echo "<br> Waktu Pembakaran : ".$kopiKintamani->roastTime();
